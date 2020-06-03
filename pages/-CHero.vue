@@ -19,7 +19,12 @@
 </template>
 
 <script>
-export default {}
+import CSSRulePlugin from 'gsap/CSSRulePlugin'
+export default {
+  mounted() {
+    console.log(CSSRulePlugin)
+  }
+}
 </script>
 
 <style lang="scss" scoped>

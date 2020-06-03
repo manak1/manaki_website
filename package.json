@@ -21,8 +21,10 @@
     }
   },
   "dependencies": {
+    "gsap": "^3.3.0",
     "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
+    "nuxt-gsap": "^0.1.4",
     "sass-loader": "^8.0.2"
   },
   "devDependencies": {
