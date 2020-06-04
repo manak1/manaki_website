@@ -2,6 +2,7 @@
   <div>
     <l-header />
     <nuxt />
+    <cursor-fx color="#fff" color-hover="#fff" />
   </div>
 </template>
 
@@ -13,3 +14,5 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped></style>

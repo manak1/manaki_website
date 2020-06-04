@@ -1,20 +1,20 @@
 <template>
   <header class="w-full fixed  text-white">
     <nav class="px-10 pt-8 mx-auto flex justify-between">
-      <h1 class="font-bold">MANAKI / IKEDA</h1>
+      <h1 class="font-bold" data-cursor-hover>MANAKI / IKEDA</h1>
       <div class="logo font-bold">
         <ol class="flex relative">
           <li class="text-white ">
-            <nuxt-link to="/" class="px-5">Home</nuxt-link>
+            <nuxt-link to="/" class="px-5" data-cursor-hover>Home</nuxt-link>
           </li>
           <li class="text-white ">
-            <nuxt-link to="/" class="px-5">About</nuxt-link>
+            <nuxt-link to="/" class="px-5" data-cursor-hover>About</nuxt-link>
           </li>
           <li class="text-white ">
-            <nuxt-link to="/" class="px-5">Work</nuxt-link>
+            <nuxt-link to="/" class="px-5" data-cursor-hover>Work</nuxt-link>
           </li>
           <li class="text-white ">
-            <nuxt-link to="/" class="px-5">Contact</nuxt-link>
+            <nuxt-link to="/" class="px-5" data-cursor-hover>Contact</nuxt-link>
           </li>
           <li class="l-header__line l-header__lineHome"></li>
         </ol>
