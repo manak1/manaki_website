@@ -66,7 +66,6 @@ export default {
       tl.from('.p-hero__img', {
         opacity: '0',
         scale: '1.5',
-        rotate: '40px',
         ease: 'Power2.easeInOut'
       })
     },
