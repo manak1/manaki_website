@@ -1,6 +1,6 @@
 <template>
   <div class="p-hero">
-    <div class="mx-auto container h-screen flex flex-col">
+    <div class="mx-auto container h-screen flex flex-col p-hero__container">
       <div class="p-hero__spacer flex-grow h-12"></div>
       <div class="p-hero__logo inline-block w-2/5 mx-auto text-center">
         <p class="p-hero__name p-hero__ma">MA</p>
@@ -14,11 +14,15 @@
         />
       </div>
       <div class="p-hero__spacer flex-grow h-12"></div>
-      <div class="text-center inline-block mx-auto pb-6 relative ">
-        <a class="text-sm" href="#">Scroll to discover</a>
-        <div class="relative h-8 mt-2">
-          <div class="p-hero__bar mx-auto mt-2"></div>
-        </div>
+      <div
+        class="text-center inline-block mx-auto pb-6 relative p-hero__attention "
+      >
+        <a class="text-sm" href="#" data-cursor-hover
+          >Scroll to discover
+          <div class="relative h-8 mt-2">
+            <div class="p-hero__bar mx-auto mt-2"></div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -37,28 +41,30 @@ export default {
       const bar1 = CSSRulePlugin.getRule('.p-hero__ma:after')
       const bar2 = CSSRulePlugin.getRule('.p-hero__n:after')
       const bar3 = CSSRulePlugin.getRule('.p-hero__ak:after')
+      const timingText = 0.8
+      const timingBar = 0.7
       const tl = this.$gsap.timeline({
         repeat: 0
       })
-      tl.from('.p-hero__ma', 1.2, {
+      tl.from('.p-hero__ma', timingText, {
         opacity: '0',
         scale: '1.6',
         ease: 'Power2.easeInOut'
       })
-      tl.from(bar1, 1, { width: '0px', ease: 'Power2.easeInOut' }, 1)
-      tl.from('.p-hero__n', 1.2, {
+      tl.from(bar1, timingBar, { width: '0px', ease: 'Power2.easeInOut' }, 1)
+      tl.from('.p-hero__n', timingText, {
         opacity: '0',
         scale: '1.6',
         ease: 'Power2.easeInOut'
       })
-      tl.from(bar2, 1, { height: '0px', ease: 'Power2.easeInOut' })
-      tl.from('.p-hero__ak', 1.2, {
+      tl.from(bar2, timingBar, { height: '0px', ease: 'Power2.easeInOut' })
+      tl.from('.p-hero__ak', timingText, {
         opacity: '0',
         scale: '1.6',
         ease: 'Power2.easeInOut'
       })
-      tl.from(bar3, 1, { width: '0px', ease: 'Power2.easeInOut' })
-      tl.from('.p-hero__i', 1.2, {
+      tl.from(bar3, timingBar, { width: '0px', ease: 'Power2.easeInOut' })
+      tl.from('.p-hero__i', timingText, {
         opacity: '0',
         scale: '1.6',
         ease: 'Power2.easeInOut'
@@ -68,12 +74,6 @@ export default {
         scale: '1.5',
         ease: 'Power2.easeInOut'
       })
-    },
-    scrollAniamtion() {
-      const tl = this.$gsap.timeline({
-        repeat: 0
-      })
-      tl.from('.p-hero__bar', 2, { height: '0px', ease: 'Power3.easeInOut' })
     }
   }
 }

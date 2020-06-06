@@ -1,25 +1,29 @@
 <template>
   <section class="c-about text-white pt-24 pb-12">
-    <div class="container mx-auto text-center">
+    <div class="container px-10 mx-auto text-center">
       <div class="c-head">
-        <h2 class="c-head__title text-white">ABOUT</h2>
+        <h2 class="c-head__title text-white">/ ABOUT /</h2>
       </div>
-      <div class="flex justify-center">
-        <div class="w-1/3 p-6 mt-12">
-          <img src="@/assets/images/about/about_img.JPG" alt="" />
+      <div class="flex justify-center w-full items-center mx-auto c-about__box">
+        <div class="w-1/2 c-box ">
+          <img
+            data-cursor-hover
+            src="@/assets/images/about/about_me.JPG"
+            class="c-box__img"
+            alt=""
+          />
         </div>
-        <div class="w-1/3 ">
-          <h3 class="text-5xl text-left ">
-            I'm Manaki, a Frontend Developer & Art Director based in Japan.
+        <div class="w-1/2 c-profile">
+          <h3 class="c-profile__job text-left">
+            Frontend Engineer
           </h3>
-          <p class="text-xl">
-            My goal is to help people build better and more meaningful products.
-            With a strong background in UX & UI design, I make use of iterative
-            hands-on processes and follow a human-centric design approach. My
-            work ranges from strategic planning and rough prototyping in the
-            early stages, to creating a strong visual design language, all of
-            which increases the value of both the brand and the product.
+          <p class="c-profile__text">
+            池田愛樹と申します。Nuxt.jsを使ったウェブサイト制作が得意でフロントエンド周りに興味があります。
+            1997年生まれ、兵庫県立国際高校卒 株式会社chatbox所属。The
+            FWA審査員。Webデザイナー/フロントエンドエンジニアとしてキャリアをスタートし、現在はアートディレクションや、動画やスチールのディレクション、UIデザイン、空間デザイン、フロントエンドエンジニアリングなど、多岐に活躍。自身が運営を務めるWebデザインギャラリー
+            S5-Styleでは優れたWebデザインを日々キュレーションしている。
           </p>
+          <a class="border px-8 py-2 inline-block  ">see more</a>
         </div>
       </div>
     </div>
@@ -33,5 +37,48 @@ export default {}
 <style lang="scss" scoped>
 .c-about {
   background-color: #191919;
+
+  &__job {
+    font-size: 46px;
+  }
+
+  &__title {
+    font-size: 12px;
+  }
+
+  &__box {
+    padding-top: 56px;
+  }
+}
+
+.c-box {
+  margin-right: 40px;
+  &__img {
+    max-width: 320px;
+    margin-left: auto;
+    filter: grayscale(100%);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    &:hover {
+      filter: grayscale(0%);
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
+  }
+}
+
+.c-profile {
+  &__job {
+    font-weight: 300;
+    font-size: 32px;
+    font-style: normal;
+  }
+
+  &__text {
+    margin-top: 16px;
+    text-align: left;
+    font-size: 16px;
+    max-width: 420px;
+  }
 }
 </style>
