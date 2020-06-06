@@ -1,8 +1,8 @@
 <template>
-  <section class="c-about text-white pt-24 pb-12">
+  <section class="c-about text-white">
     <div class="container px-10 mx-auto text-center">
       <div class="c-head">
-        <h2 class="c-head__title text-white">/ ABOUT /</h2>
+        <h2 class="c-head__title text-white">ABOUT</h2>
       </div>
       <div class="flex justify-center w-full items-center mx-auto c-about__box">
         <div class="w-1/2 c-box ">
@@ -13,8 +13,8 @@
             alt=""
           />
         </div>
-        <div class="w-1/2 c-profile">
-          <h3 class="c-profile__job text-left">
+        <div class="w-1/2 c-profile text-left">
+          <h3 class="c-profile__job ">
             Frontend Engineer
           </h3>
           <p class="c-profile__text">
@@ -23,7 +23,7 @@
             FWA審査員。Webデザイナー/フロントエンドエンジニアとしてキャリアをスタートし、現在はアートディレクションや、動画やスチールのディレクション、UIデザイン、空間デザイン、フロントエンドエンジニアリングなど、多岐に活躍。自身が運営を務めるWebデザインギャラリー
             S5-Styleでは優れたWebデザインを日々キュレーションしている。
           </p>
-          <a class="border px-8 py-2 inline-block  ">see more</a>
+          <a class="border px-8 py-2  inline-block  mt-6 ">see more</a>
         </div>
       </div>
     </div>
@@ -36,6 +36,7 @@ export default {}
 
 <style lang="scss" scoped>
 .c-about {
+  padding-bottom: 240px;
   background-color: #191919;
 
   &__job {
@@ -69,9 +70,9 @@ export default {}
 
 .c-profile {
   &__job {
-    font-weight: 300;
+    font-weight: 700;
     font-size: 32px;
-    font-style: normal;
+    font-style: italic;
   }
 
   &__text {

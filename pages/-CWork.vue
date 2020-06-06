@@ -7,6 +7,7 @@
           <div class="c-slider__item justify-center flex items-center">
             <div class="c-desc w-2/5">
               <h3 class="c-desc__title">アンゴウメッセ</h3>
+              <span class="c-desc__category">webアプリ</span>
               <p class="c-desc__text">
                 アンゴウメッセはVue.jsとFirebaseを使って作成した人生初のウェブアプリです。
                 子供の頃に暗号を使って友達と会話してみたいという小さな夢を叶えるために作成したプロジェクトです。
@@ -129,9 +130,24 @@ export default {
   }
 
   &__text {
-    margin-top: 8px;
+    margin-top: 12px;
     font-size: 16px;
     line-height: 2;
+  }
+
+  &__category {
+    position: relative;
+    display: inline-block;
+    margin: 12px;
+    &:before {
+      content: '';
+      width: 4px;
+      height: 20px;
+      background-color: #fff;
+      position: absolute;
+      left: -12px;
+      top: 2px;
+    }
   }
 }
 </style>
