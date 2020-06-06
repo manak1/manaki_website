@@ -1,6 +1,7 @@
 <template>
   <div>
     <c-hero />
+    <c-work />
     <c-about />
   </div>
 </template>
@@ -8,10 +9,12 @@
 <script>
 import CHero from '@/pages/-CHero'
 import CAbout from '@/pages/-CAbout'
+import CWork from '@/pages/-CWork'
 export default {
   components: {
     CHero,
-    CAbout
+    CAbout,
+    CWork
   }
 }
 </script>
