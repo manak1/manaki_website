@@ -10,13 +10,19 @@
             <nuxt-link to="/" class="px-5" data-cursor-hover>Home</nuxt-link>
           </li>
           <li class="text-white ">
-            <nuxt-link to="/" class="px-5" data-cursor-hover>About</nuxt-link>
+            <nuxt-link
+              to="/"
+              class="px-5"
+              data-cursor-hover
+              @click.native="handleSmooth()"
+              >About</nuxt-link
+            >
           </li>
           <li class="text-white ">
             <nuxt-link to="/" class="px-5" data-cursor-hover>Work</nuxt-link>
           </li>
           <li class="text-white ">
-            <nuxt-link to="/" class="px-5" data-cursor-hover>Contact</nuxt-link>
+            <nuxt-link to="/" class="px-5" data-cursor-hover>Social</nuxt-link>
           </li>
           <li class="l-header__line l-header__lineHome"></li>
         </ol>
@@ -26,7 +32,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    handleSmooth() {
+      event.preventDefault()
+      this.$SmoothScroll(document.querySelector('#work'), 1200, null, null, 'y')
+    }
+  }
+}
 </script>
 
 <style lang="scss">

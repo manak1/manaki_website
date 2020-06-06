@@ -15,6 +15,12 @@ export default {
     CHero,
     CAbout,
     CWork
+  },
+  data() {
+    return {
+      scrollY: 0,
+      moving: false
+    }
   }
 }
 </script>

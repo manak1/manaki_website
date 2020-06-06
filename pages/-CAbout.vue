@@ -1,5 +1,6 @@
 <template>
-  <section class="c-about text-white">
+  <section class="c-about h-screen text-white flex flex-col ">
+    <div class="flex-grow"></div>
     <div class="container px-10 mx-auto text-center">
       <div class="c-head">
         <h2 class="c-head__title text-white">ABOUT</h2>
@@ -27,6 +28,7 @@
         </div>
       </div>
     </div>
+    <div class="flex-grow"></div>
   </section>
 </template>
 

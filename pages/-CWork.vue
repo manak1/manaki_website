@@ -1,6 +1,6 @@
 <template>
-  <section class="c-work text-white">
-    <div class="container text-center mx-auto">
+  <section id="work" class="c-work h-screen text-white">
+    <div class="container px-10 text-center mx-auto">
       <div class="c-work__head">
         <h2>WORK</h2>
         <div class="c-slider">

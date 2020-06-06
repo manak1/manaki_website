@@ -5,7 +5,9 @@
       <div class="p-hero__logo inline-block w-2/5 mx-auto text-center">
         <p class="p-hero__name p-hero__ma">MA</p>
         <p class="p-hero__name p-hero__n">N</p>
-        <p class="p-hero__name p-hero__ak">AK</p>
+        <p class="p-hero__name p-hero__ak">
+          <span class="p-hero__akCenter">A</span>
+        </p>
         <p class="p-hero__name p-hero__i">I</p>
         <img
           src="@/assets/images/hero/hero_logo.png"
@@ -13,17 +15,17 @@
           class="mx-auto w-full p-hero__img"
         />
       </div>
-      <div class="p-hero__spacer flex-grow h-12"></div>
       <div
-        class="text-center inline-block mx-auto pb-6 relative p-hero__attention "
+        class="text-center inline-block mx-auto mt-12 pb-6 relative p-hero__attention "
       >
-        <a class="text-sm" href="#" data-cursor-hover
+        <a class="text-sm" href="#" data-cursor-hover :class="actionClass"
           >Scroll to discover
-          <div class="relative h-8 mt-2">
+          <div class="relative h-8 mt-2 " :class="actionClass">
             <div class="p-hero__bar mx-auto mt-2"></div>
           </div>
         </a>
       </div>
+      <div class="p-hero__spacer flex-grow h-12"></div>
     </div>
   </div>
 </template>
@@ -32,9 +34,23 @@
 import CSSRulePlugin from 'gsap/CSSRulePlugin'
 
 export default {
+  data() {
+    return {
+      visible: true,
+      scrollY: 0
+    }
+  },
+  computed: {
+    actionClass() {
+      return {
+        'c-scrolled': this.scrollY > 0
+      }
+    }
+  },
   mounted() {
     this.$gsap.registerPlugin(CSSRulePlugin)
     this.logoAniamtion()
+    window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     logoAniamtion() {
@@ -51,19 +67,20 @@ export default {
         scale: '1.6',
         ease: 'Power2.easeInOut'
       })
-      tl.from(bar1, timingBar, { width: '0px', ease: 'Power2.easeInOut' }, 1)
+      tl.from(bar1, timingBar, { width: '0%', ease: 'Power2.easeInOut' }, 1)
       tl.from('.p-hero__n', timingText, {
         opacity: '0',
         scale: '1.6',
+        height: '0%',
         ease: 'Power2.easeInOut'
       })
-      tl.from(bar2, timingBar, { height: '0px', ease: 'Power2.easeInOut' })
+      tl.from(bar2, timingBar, { height: '0%', ease: 'Power2.easeInOut' })
       tl.from('.p-hero__ak', timingText, {
         opacity: '0',
         scale: '1.6',
         ease: 'Power2.easeInOut'
       })
-      tl.from(bar3, timingBar, { width: '0px', ease: 'Power2.easeInOut' })
+      tl.from(bar3, timingBar, { width: '0%', ease: 'Power2.easeInOut' })
       tl.from('.p-hero__i', timingText, {
         opacity: '0',
         scale: '1.6',
@@ -76,6 +93,9 @@ export default {
       })
 
       tl.from('.p-hero__attention', 3, { opacity: '0', ease: 'easeInOut' })
+    },
+    handleScroll() {
+      this.scrollY = window.scrollY
     }
   }
 }
@@ -107,13 +127,15 @@ $bar-color: #fff;
 
   &__ma {
     left: -20px;
+    width: 100%;
+    text-align: left;
 
     &:after {
       position: absolute;
       left: 80px;
       top: 30px;
       content: '';
-      width: 420px;
+      width: 80%;
       height: 2px;
       background-color: $bar_color;
       display: block;
@@ -122,6 +144,8 @@ $bar-color: #fff;
 
   &__n {
     right: -20px;
+    height: 80%;
+    overflow: hidden;
 
     &:after {
       position: absolute;
@@ -129,29 +153,39 @@ $bar-color: #fff;
       top: 75px;
       content: '';
       width: 2px;
-      height: 330px;
+      height: 90%;
       background-color: $bar_color;
       display: block;
     }
   }
 
   &__ak {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+    width: 100%;
+    text-align: right;
     letter-spacing: -12px;
-    right: -35px;
+    right: -3px;
     bottom: 30px;
 
     &:after {
       position: absolute;
-      right: 60px;
-      top: 63px;
+      right: 30px;
+      top: 53px;
       content: '';
-      width: 470px;
+      width: 90%;
       height: 2px;
       background-color: $bar_color;
       display: block;
     }
+
+    &:before {
+      content: 'K';
+      position: absolute;
+      top: 40px;
+    }
+  }
+
+  &__akCenter {
+    margin-left: auto;
   }
 
   &__i {
@@ -169,6 +203,15 @@ $bar-color: #fff;
     animation: scrollDown 2s infinite;
     animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   }
+
+  &__attention {
+    opacity: 1;
+  }
+}
+
+.c-scrolled {
+  opacity: 0;
+  transition-duration: 0.3s;
 }
 
 @keyframes scrollDown {
