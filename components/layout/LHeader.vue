@@ -1,7 +1,9 @@
 <template>
   <header class="w-full fixed  text-white">
     <nav class="px-10 pt-8 mx-auto flex justify-between">
-      <h1 class="font-bold" data-cursor-hover>MANAKI / IKEDA</h1>
+      <h1 class="font-bold l-header__title" data-cursor-hover>
+        MANAKI / IKEDA
+      </h1>
       <div class="logo font-bold">
         <ol class="flex relative">
           <li class="text-white ">
@@ -35,6 +37,18 @@ export default {}
     height: 2px;
     bottom: -8px;
     background-color: #fff;
+  }
+
+  &__title {
+    letter-spacing: initial;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      letter-spacing: 2px;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+    }
   }
 
   &__lineHome {
