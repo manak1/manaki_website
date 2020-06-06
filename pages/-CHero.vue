@@ -74,6 +74,8 @@ export default {
         scale: '1.5',
         ease: 'Power2.easeInOut'
       })
+
+      tl.from('.p-hero__attention', 3, { opacity: '0', ease: 'easeInOut' })
     }
   }
 }
