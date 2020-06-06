@@ -2,7 +2,7 @@
   <section class="c-work text-white">
     <div class="container text-center mx-auto">
       <div class="c-work__head">
-        <h2>/ WORK /</h2>
+        <h2>WORK</h2>
         <div class="c-slider">
           <div class="c-slider__item justify-center flex items-center">
             <div class="c-desc w-2/5">
@@ -39,6 +39,11 @@
             </a>
           </div>
         </div>
+        <div class="c-buttons mt-24">
+          <a href="" class="c-buttons__buttonm border px-8 py-2 inline-block">
+            see more
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -52,7 +57,7 @@ export default {
 
 <style lang="scss" scoped>
 .c-work {
-  padding: 120px 0;
+  padding: 240px 0;
   background-color: #191919;
 }
 
@@ -86,6 +91,10 @@ export default {
     height: 70px;
     line-height: 70px;
     font-size: 40px;
+
+    &:hover {
+      background-color: #fff;
+    }
   }
 
   &__icon {
@@ -98,13 +107,13 @@ export default {
 .c-item {
   max-width: 576px;
   filter: grayscale(100%);
-  transition-duration: 0.3s;
+  transition-duration: 3s;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1),
     cubic-bezier(0.215, 0.61, 0.355, 1);
 
   &:hover {
     filter: grayscale(0%);
-    transition-duration: 0.3s;
+    transition-duration: 3s;
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1),
       cubic-bezier(0.215, 0.61, 0.355, 1);
   }
