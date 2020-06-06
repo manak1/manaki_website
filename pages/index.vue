@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <c-hero />
-    <c-work />
-    <c-about />
+  <div class="fullpage-container">
+    <div class="fullpage-wp">
+      <c-hero />
+      <c-work />
+      <c-about />
+    </div>
   </div>
 </template>
 

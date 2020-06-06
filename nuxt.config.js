@@ -30,7 +30,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/cursor-fx', '~/plugins/smoothScroll'],
+  plugins: [
+    '~/plugins/cursor-fx',
+    '~/plugins/smoothScroll',
+    'nuxt-fullpage.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
