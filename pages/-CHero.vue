@@ -15,6 +15,8 @@
           class="mx-auto w-full p-hero__img"
         />
       </div>
+      <h2>use this vue-fullpage.js official plugin</h2>
+      <div class="p-hero__spacer flex-grow h-12"></div>
       <div
         class="text-center inline-block mx-auto mt-12 pb-6 relative p-hero__attention "
       >
@@ -25,7 +27,6 @@
           </div>
         </a>
       </div>
-      <div class="p-hero__spacer flex-grow h-12"></div>
     </div>
   </div>
 </template>
@@ -71,7 +72,6 @@ export default {
       tl.from('.p-hero__n', timingText, {
         opacity: '0',
         scale: '1.6',
-        height: '0%',
         ease: 'Power2.easeInOut'
       })
       tl.from(bar2, timingBar, { height: '0%', ease: 'Power2.easeInOut' })
@@ -145,7 +145,6 @@ $bar-color: #fff;
   &__n {
     right: -20px;
     height: 80%;
-    overflow: hidden;
 
     &:after {
       position: absolute;

@@ -1,5 +1,5 @@
 <template>
-  <section id="work" class="c-work h-screen text-white">
+  <section class="c-work h-screen text-white">
     <div class="container px-10 text-center mx-auto">
       <div class="c-work__head">
         <h2>WORK</h2>

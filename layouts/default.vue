@@ -19,6 +19,7 @@ export default {
     })
 
     tl.to('.p-loader', 1.8, { y: '-100vh', ease: 'Power3.easeInOut' })
+    console.log(this.$fullpage)
   }
 }
 </script>
