@@ -7,19 +7,20 @@
         <div class="c-slider">
           <div class="c-slider__item justify-center flex items-center">
             <div class="c-desc w-2/5">
-              <h3 class="c-desc__title">アンゴウメッセ</h3>
-              <span class="c-desc__category">webアプリ</span>
+              <h3 class="c-desc__title">{{ getWork.title }}</h3>
+              <span class="c-desc__category">{{ getWork.tag }}</span>
               <p class="c-desc__text">
-                アンゴウメッセはVue.jsとFirebaseを使って作成した人生初のウェブアプリです。
-                子供の頃に暗号を使って友達と会話してみたいという小さな夢を叶えるために作成しました。
+                {{ getWork.text }}
               </p>
             </div>
             <div class="c-item w-3/5">
-              <img
-                src="@/assets/images/work/work1.png"
-                alt=""
-                class="c-item__img"
-              />
+              <a :href="getWork.url" target="_blank">
+                <img
+                  :src="getWork.img"
+                  alt="制作物の画像"
+                  class="c-item__img"
+                />
+              </a>
             </div>
           </div>
           <div class="c-slider__left">
@@ -53,7 +54,20 @@
 </template>
 
 <script>
-export default {}
+import { works } from '@/static/api/works.json'
+export default {
+  data() {
+    return {
+      workData: works,
+      index: 0
+    }
+  },
+  computed: {
+    getWork() {
+      return this.workData[this.index]
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
