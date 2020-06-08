@@ -1,0 +1,14 @@
+works: 
+  - title: アンゴウメッセ
+    text: アンゴウメッセはVue.jsとFirebaseを使って作成した人生初のウェブアプリです。 子供の頃に暗号を使って友達と会話してみたいという小さな夢を叶えるために作成しました。
+    tag: webアプリ
+    query: angoumesse
+    url: "https://angoumesse.fun"
+    img: "/images/work/work1.png"
+
+  - title: ゴリラでも出来るゲーム開発
+    text: 大学二回生の頃に作成したブログです。ゲーム開発に興味のある方に向けてGamemaker Studioというゲームエンジンの使い方を解説しています。
+    tag: ブログ
+    query: gorillagamedevelop
+    url: https:hellomanaki.com
+    img: "/images/work/work2.png"
