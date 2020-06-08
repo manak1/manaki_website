@@ -15,12 +15,16 @@
           class="mx-auto w-full p-hero__img"
         />
       </div>
-      <h2>use this vue-fullpage.js official plugin</h2>
       <div class="p-hero__spacer flex-grow h-12"></div>
       <div
         class="text-center inline-block mx-auto mt-12 pb-6 relative p-hero__attention "
       >
-        <a class="text-sm" href="#" data-cursor-hover :class="actionClass"
+        <a
+          class="text-sm"
+          href="#"
+          data-cursor-hover
+          :class="actionClass"
+          @click.prevent="$refs.fullpage.api.moveSectionDown()"
           >Scroll to discover
           <div class="relative h-8 mt-2 " :class="actionClass">
             <div class="p-hero__bar mx-auto mt-2"></div>
@@ -44,14 +48,13 @@ export default {
   computed: {
     actionClass() {
       return {
-        'c-scrolled': this.scrollY > 0
+        'c-scrolled': this.$route.hash !== '#home'
       }
     }
   },
   mounted() {
     this.$gsap.registerPlugin(CSSRulePlugin)
     this.logoAniamtion()
-    window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     logoAniamtion() {
@@ -63,6 +66,7 @@ export default {
       const tl = this.$gsap.timeline({
         repeat: 0
       })
+      tl.delay(2)
       tl.from('.p-hero__ma', timingText, {
         opacity: '0',
         scale: '1.6',
@@ -93,9 +97,6 @@ export default {
       })
 
       tl.from('.p-hero__attention', 3, { opacity: '0', ease: 'easeInOut' })
-    },
-    handleScroll() {
-      this.scrollY = window.scrollY
     }
   }
 }

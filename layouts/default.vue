@@ -1,6 +1,6 @@
 <template>
   <div>
-    <l-header />
+    <!--     <l-header /> -->
     <nuxt />
     <cursor-fx color="#fff" color-hover="#fff" />
     <div class="p-loader"></div>
@@ -8,18 +8,19 @@
 </template>
 
 <script>
-import LHeader from '@/components/layout/LHeader'
+/* import LHeader from '@/components/layout/LHeader' */
 export default {
   components: {
-    LHeader
+    /*  LHeader */
   },
   mounted() {
     const tl = this.$gsap.timeline({
       repeat: 0
     })
-
-    tl.to('.p-loader', 1.8, { y: '-100vh', ease: 'Power3.easeInOut' })
-    console.log(this.$fullpage)
+    tl.to('.p-loader', 1.4, {
+      y: '-100vh',
+      ease: 'Power3.easeIn'
+    })
   }
 }
 </script>

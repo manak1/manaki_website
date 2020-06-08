@@ -7,22 +7,37 @@
       <div class="logo font-bold">
         <ol class="flex relative">
           <li class="text-white ">
-            <nuxt-link to="/" class="px-5" data-cursor-hover>Home</nuxt-link>
-          </li>
-          <li class="text-white ">
-            <nuxt-link
-              class="px-5"
+            <a
               to="/"
+              href="#"
+              class="px-5"
               data-cursor-hover
-              @click.native="pushAbout()"
-              >About</nuxt-link
+              @click.prevent="$emit('jumpSection', 1)"
+              >Home</a
+            >
+          </li>
+          <li class="text-white">
+            <a
+              to="/"
+              href="#"
+              class="px-5"
+              data-cursor-hover
+              @click="$emit('jumpSection', 2)"
+              >Work</a
             >
           </li>
           <li class="text-white ">
-            <nuxt-link to="/" class="px-5" data-cursor-hover>Work</nuxt-link>
+            <a
+              class="px-5"
+              to="/"
+              href="#"
+              data-cursor-hover
+              @click.prevent="$emit('jumpSection', 3)"
+              >About</a
+            >
           </li>
           <li class="text-white ">
-            <nuxt-link to="/" class="px-5" data-cursor-hover>Social</nuxt-link>
+            <a to="/" class="px-5" data-cursor-hover>Social</a>
           </li>
           <li
             class="l-header__line l-header__lineHome"
@@ -48,18 +63,10 @@ export default {
       }
     }
   },
-  mounted() {},
+
   methods: {
-    handleSmooth() {
-      event.preventDefault()
-      this.$SmoothScroll(document.querySelector('#work'), 1200, null, null, 'y')
-    },
     pushAbout() {
       this.$router.push('#about')
-
-      /* 
-      use this https://github.com/alvarotrigo/vue-fullpage.js
-      */
     }
   }
 }
@@ -99,12 +106,12 @@ export default {
   transition-duration: 0.9s;
 }
 
-.c-about__active {
+.c-work__active {
   left: 100px;
   transition-duration: 0.9s;
 }
 
-.c-work__active {
+.c-about__active {
   left: 180px;
 }
 </style>
