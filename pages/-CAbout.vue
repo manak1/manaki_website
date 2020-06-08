@@ -38,7 +38,6 @@ export default {}
 
 <style lang="scss" scoped>
 .c-about {
-  padding-bottom: 240px;
   background-color: #191919;
 
   &__job {

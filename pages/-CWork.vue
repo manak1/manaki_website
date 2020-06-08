@@ -1,6 +1,7 @@
 <template>
-  <section id="work" class="c-work h-screen text-white">
-    <div class="container px-10 text-center mx-auto">
+  <section class="c-work  text-white">
+    <div class="container h-screen px-10 text-center mx-auto flex flex-col">
+      <div class="flex-grow"></div>
       <div class="c-work__head">
         <h2>WORK</h2>
         <div class="c-slider">
@@ -10,7 +11,7 @@
               <span class="c-desc__category">webアプリ</span>
               <p class="c-desc__text">
                 アンゴウメッセはVue.jsとFirebaseを使って作成した人生初のウェブアプリです。
-                子供の頃に暗号を使って友達と会話してみたいという小さな夢を叶えるために作成したプロジェクトです。
+                子供の頃に暗号を使って友達と会話してみたいという小さな夢を叶えるために作成しました。
               </p>
             </div>
             <div class="c-item w-3/5">
@@ -46,19 +47,17 @@
           </a>
         </div>
       </div>
+      <div class="flex-grow"></div>
     </div>
   </section>
 </template>
 
 <script>
-export default {
-  components: {}
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
 .c-work {
-  padding: 240px 0;
   background-color: #191919;
 }
 
