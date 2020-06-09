@@ -5,4 +5,4 @@
   publish = "/dist/"
 
   # Default build command.
-  command = "npm run generate"
+  command = "npm run doc && npm run generate"
