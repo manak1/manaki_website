@@ -32,10 +32,10 @@
     "nuxt-fullpage.js": "0.0.3",
     "nuxt-gsap": "^0.1.4",
     "sass-loader": "^8.0.2",
-    "vue-smoothscroll": "^0.2.0"
+    "vue-smoothscroll": "^0.2.0",
+    "@nuxtjs/tailwindcss": "^1.0.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^1.0.0",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "babel-eslint": "^10.0.1",
