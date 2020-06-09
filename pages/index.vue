@@ -36,7 +36,6 @@ export default {
       options: {
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         scrollBar: false,
-        menu: '#menu',
         navigation: false,
         easingcss3: 'cubic-bezier(0.77, 0.2, 0.05, 1)',
         anchors: ['home', 'work', 'about'],
@@ -56,7 +55,7 @@ export default {
   },
   methods: {
     jumpSection(index) {
-      this.$refs.fullpage.api.moveTo(index, 0)
+      this.$refs.fullpage.api.moveTo(index)
     }
   }
 }
