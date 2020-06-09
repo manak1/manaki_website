@@ -22,7 +22,7 @@
               href="#"
               class="px-5"
               data-cursor-hover
-              @click="$emit('jumpSection', 2)"
+              @click.prevent="$emit('jumpSection', 2)"
               >Work</a
             >
           </li>
@@ -61,12 +61,6 @@ export default {
         'c-about__active': this.getQuery === '#about',
         'c-work__active': this.getQuery === '#work'
       }
-    }
-  },
-
-  methods: {
-    pushAbout() {
-      this.$router.push('#about')
     }
   }
 }
