@@ -21,7 +21,7 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
+  }, 
   "dependencies": {
     "@luxdamore/vue-cursor-fx": "^1.4.0",
     "gsap": "^3.3.0",
