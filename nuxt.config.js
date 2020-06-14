@@ -31,8 +31,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~/plugins/cursor-fx',
-    '~/plugins/smoothScroll',
+    { src: '~/plugins/cursor-fx', mode: 'client' },
     { src: '~/plugins/fullpage', mode: 'client' }
   ],
   /*
