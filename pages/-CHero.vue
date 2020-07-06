@@ -19,12 +19,7 @@
       <div
         class="text-center inline-block mx-auto mt-12 pb-6 relative p-hero__attention "
       >
-        <a
-          class="text-sm"
-          href="#"
-          data-cursor-hover
-          :class="actionClass"
-          @click.prevent="$refs.fullpage.api.moveSectionDown()"
+        <a class="text-sm" href="#" data-cursor-hover :class="actionClass"
           >Scroll to discover
           <div class="relative h-8 mt-2 " :class="actionClass">
             <div class="p-hero__bar mx-auto mt-2"></div>
@@ -36,6 +31,7 @@
 </template>
 
 <script>
+// eslint-disable-next-line import/no-named-as-default
 import CSSRulePlugin from 'gsap/CSSRulePlugin'
 
 export default {
@@ -48,7 +44,7 @@ export default {
   computed: {
     actionClass() {
       return {
-        'c-scrolled': this.$route.hash !== '#home'
+        'c-scrolled': this.$route.hash !== '#home' || this.$route.has === ''
       }
     }
   },
